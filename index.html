@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac15</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/57e6b371bf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a id="logo-ref" href="#"><img id="logo" src="pc-logo.png" alt="Логотип"></a>
+        <nav class="main">
+            <div class="thumb"></div>
+            <a href="#home">Главная</a>
+            <a href="#section-1">Раздел 1</a>
+            <a href="#section-2">Раздел 2</a>
+            <a href="#section-3">Раздел 3</a>
+            <a href="#section-4">Раздел 4</a>
+            <a href="#section-5">Раздел 5</a>
+            <a href="#section-6">Раздел 6</a>
+            <!-- Menu -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            <nav class="menu">
+                <a href="#home">Главная</a>
+                <a href="#section-1">Раздел 1</a>
+                <a href="#section-2">Раздел 2</a>
+                <a href="#section-3">Раздел 3</a>
+                <a href="#section-4">Раздел 4</a>
+                <a href="#section-5">Раздел 5</a>
+                <a href="#section-6">Раздел 6</a>
+            </nav>
+        </nav>
+        <script>
+            const container = document.querySelector('.main');
+            const thumb = container.querySelector('.thumb');
+            container.addEventListener('mousemove', (event) => {
+                const x = event.clientX - (thumb.clientWidth/2);
+                thumb.style.left = `${x}px`;
+            });
+        </script>
+    </header>
+    <section id="home">
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+        <div class="movie-box">
+            <img src="">
+            <h2 id="movie-name"></h2>
+        </div>
+    </section>
+    <section id="section-1">
+        <div class="weather-container">
+            <div class="head">
+                <h2><i class="fa-solid fa-arrow-left" id="return" style="color: #55c8ff;"></i> Weather App</h2>
+            </div>
+            <div class="weather-box-start">
+                <input type="text" id="city-name" placeholder="Enter city name">
+                <p>or</p>
+                <button type="button" class="get-location">Get Device Location</button>
+            </div>
+            <div class="weather-box-result">
+                <img src="cloudy.png">
+                <h2 class="temp"></h2>
+                <p class="description"></p>
+                <p class="location"></p>
+                <div class="grid-box">
+                    <div class="feels-like">
+                        <p>Feels like <h3 class="temp-like"></h3></p>
+                    </div>
+                    <div class="humidity">
+                        <p>Humidity <h3 class="temp-humidity"></h3></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright © 2022 Student MIREA. All Rights Reserved</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
